@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resume/presentation/components/footer_section.dart';
+import 'package:flutter_resume/presentation/components/skill_progress.dart';
+import 'package:flutter_resume/presentation/components/social_icon_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeViewLarge extends StatelessWidget {
   final double maxHeight;
   final double maxWidth;
 
-  const HomeViewLarge({
+  HomeViewLarge({
     @required this.maxHeight,
     @required this.maxWidth,
   });
@@ -39,22 +42,32 @@ class HomeViewLarge extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               'John Smith',
+                              textAlign: TextAlign.end,
                               style: TextStyle(
                                   fontSize: 45, fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 10),
                             Text(
                               'Flutter Developer',
+                              textAlign: TextAlign.end,
                               style:
                                   TextStyle(fontSize: 22, color: Colors.pink),
                             ),
                           ],
                         ),
                         Container(height: 10, width: 100, color: Colors.pink),
-                        Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                          style: TextStyle(letterSpacing: 1.4, height: 2),
-                          textAlign: TextAlign.end,
+                        LimitedBox(
+                          maxHeight: contentHeight * .5,
+                          child: ListView(
+                            shrinkWrap: true,
+                            children: <Widget>[
+                              Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                style: TextStyle(letterSpacing: 1.4, height: 2),
+                                textAlign: TextAlign.end,
+                              ),
+                            ],
+                          ),
                         ),
                         Container(
                           decoration: BoxDecoration(
@@ -93,8 +106,40 @@ class HomeViewLarge extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    color: Colors.pink,
+                  child: Padding(
+                    padding: const EdgeInsets.all(40),
+                    child: SizedBox(
+                      height: contentHeight * .8,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          SkillProgress(skill: 'Design', competency: 0.8),
+                          SkillProgress(skill: 'Photography', competency: 0.65),
+                          SkillProgress(skill: 'Marketing', competency: 0.50),
+                          SkillProgress(skill: 'Branding', competency: 0.30),
+                          SkillProgress(skill: 'Flutter', competency: 1),
+                          Wrap(
+                            runSpacing: 10,
+                            spacing: 10,
+                            children: <Widget>[
+                              SocialIconButton(
+                                icon: FontAwesomeIcons.twitter,
+                              ),
+                              SocialIconButton(
+                                icon: FontAwesomeIcons.facebookF,
+                              ),
+                              SocialIconButton(
+                                icon: FontAwesomeIcons.linkedinIn,
+                              ),
+                              SocialIconButton(
+                                icon: FontAwesomeIcons.googlePlusG,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -134,91 +179,6 @@ class HomeViewLarge extends StatelessWidget {
                 ],
               )),
         ],
-      ),
-    );
-  }
-}
-
-class FooterSection extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final List<String> info;
-  const FooterSection({
-    @required this.icon,
-    @required this.title,
-    @required this.info,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          IconDescriptor(
-            icon: icon,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text(
-                title.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 15),
-              ...info
-                  .map(
-                    (line) => [
-                      Text(
-                        line,
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(height: 5)
-                    ],
-                  )
-                  .expand((x) => x)
-                  .toList()
-                    ..removeLast(),
-            ],
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class IconDescriptor extends StatelessWidget {
-  final IconData icon;
-  const IconDescriptor({Key key, @required this.icon}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.white,
-            width: 1,
-          ),
-          shape: BoxShape.circle,
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(25),
-          child: Icon(
-            icon,
-            color: Colors.white,
-            size: 40,
-          ),
-        ),
       ),
     );
   }

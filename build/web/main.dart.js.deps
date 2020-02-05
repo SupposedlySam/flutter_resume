@@ -2,6 +2,10 @@ file:///C:/Users/Jonah/projects/flutter_resume/.dart_tool/flutter_build/bc9df861
 file:///C:/Users/Jonah/projects/flutter_resume/.packages
 file:///C:/Users/Jonah/projects/flutter_resume/lib/generated_plugin_registrant.dart
 file:///C:/Users/Jonah/projects/flutter_resume/lib/main.dart
+file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/components/footer_section.dart
+file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/components/item_descriptor.dart
+file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/components/skill_progress.dart
+file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/components/social_icon_button.dart
 file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/views/home_view.dart
 file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/views/home_view_large.dart
 file:///C:/Users/Jonah/projects/flutter_resume/lib/presentation/views/home_view_small.dart
