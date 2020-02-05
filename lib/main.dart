@@ -11,7 +11,7 @@ class FlutterResume extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeView(title: 'Flutter Demo Home Page'),
+      home: HomeView(),
     );
   }
 }
