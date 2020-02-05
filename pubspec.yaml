@@ -19,7 +19,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dotted_border: ^1.0.4 # used to created dashed borders
   font_awesome_flutter: ^8.5.0 # icons from font awesome
   firebase_core: ^0.4.3+2 # enables using multiple firebase projects
   firebase: ^7.2.0 # used for firestore and storage on web

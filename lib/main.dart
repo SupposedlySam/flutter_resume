@@ -12,6 +12,7 @@ class FlutterResume extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomeView(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
