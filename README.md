@@ -1,5 +1,7 @@
 # flutter_resume
 
+Check it out: https://blissful-kepler-4fceb8.netlify.com/#/
+
 A new Flutter project.
 
 ## Getting Started
