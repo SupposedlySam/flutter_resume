@@ -21,7 +21,15 @@ class HomeViewLarge extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Expanded(child: Container(color: Colors.blueGrey)),
-              Expanded(child: Container(color: Colors.deepOrange)),
+              Expanded(
+                child: ClipRect(
+                  child: Image.asset(
+                    'assets/resume-image.jpg',
+                    height: contentHeight,
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+              ),
               Expanded(child: Container(color: Colors.pink)),
             ],
           ),
