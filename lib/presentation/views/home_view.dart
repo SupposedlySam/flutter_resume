@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
         return constraints.maxWidth > 1000
             ? HomeViewLarge(
                 maxHeight: constraints.maxHeight,
+                maxWidth: constraints.maxWidth,
               )
             : HomeViewSmall();
       }),

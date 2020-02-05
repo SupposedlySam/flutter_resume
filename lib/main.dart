@@ -10,6 +10,7 @@ class FlutterResume extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: HomeView(),
       debugShowCheckedModeBanner: false,
