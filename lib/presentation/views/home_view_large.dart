@@ -69,29 +69,7 @@ class HomeViewLarge extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 1,
-                            ),
-                          ),
-                          padding: const EdgeInsets.all(4),
-                          child: GestureDetector(
-                            child: Container(
-                              color: Colors.black,
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 60,
-                                vertical: 20,
-                              ),
-                              child: Text(
-                                'HIRE ME',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                            onTap: () {},
-                          ),
-                        )
+                        _hireMeButton()
                       ],
                     ),
                   ),
@@ -179,6 +157,32 @@ class HomeViewLarge extends StatelessWidget {
                 ],
               )),
         ],
+      ),
+    );
+  }
+
+  Container _hireMeButton() {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.black,
+          width: 1,
+        ),
+      ),
+      padding: const EdgeInsets.all(4),
+      child: GestureDetector(
+        child: Container(
+          color: Colors.black,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 60,
+            vertical: 20,
+          ),
+          child: Text(
+            'HIRE ME'.toUpperCase(),
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        onTap: () {},
       ),
     );
   }
