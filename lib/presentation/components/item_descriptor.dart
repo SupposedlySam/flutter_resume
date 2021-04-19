@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class IconDescriptor extends StatelessWidget {
   final IconData icon;
-  const IconDescriptor({Key key, @required this.icon}) : super(key: key);
+  const IconDescriptor({Key? key, required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

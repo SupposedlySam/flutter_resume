@@ -6,9 +6,9 @@ class FooterSection extends StatelessWidget {
   final String title;
   final List<String> info;
   const FooterSection({
-    @required this.icon,
-    @required this.title,
-    @required this.info,
+    required this.icon,
+    required this.title,
+    required this.info,
   });
 
   @override

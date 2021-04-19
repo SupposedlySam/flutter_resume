@@ -9,8 +9,8 @@ class HomeViewLarge extends StatelessWidget {
   final double maxWidth;
 
   HomeViewLarge({
-    @required this.maxHeight,
-    @required this.maxWidth,
+    required this.maxHeight,
+    required this.maxWidth,
   });
 
   @override

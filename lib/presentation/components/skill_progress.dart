@@ -5,8 +5,8 @@ class SkillProgress extends StatelessWidget {
   final double competency;
 
   const SkillProgress({
-    @required this.skill,
-    @required this.competency,
+    required this.skill,
+    required this.competency,
   });
 
   @override

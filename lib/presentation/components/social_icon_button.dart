@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SocialIconButton extends StatelessWidget {
   final IconData icon;
   const SocialIconButton({
-    @required this.icon,
+    required this.icon,
   });
 
   @override
