@@ -8,7 +8,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Flutter Demo")),
       body: LayoutBuilder(builder: (context, constraints) {
-        return constraints.maxWidth > 1000
+        return constraints.maxWidth > 1100
             ? HomeViewLarge(
                 maxHeight: constraints.maxHeight,
                 maxWidth: constraints.maxWidth,
