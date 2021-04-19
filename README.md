@@ -21,6 +21,9 @@ An example web project with the `HomeViewSmall` screen intentionally left unfini
 It's up to you how you build your mobile view. Happy coding!
 
 
+## Build
+Once you're done with all your updates. Make sure to run `flutter build web` to generate your web project under the `build/web` folder. This folder will contain your `index.html` and `assets`.
+
 ## NNBD
 ### This project has been updated to use non-null by default. Most notable changes:
 - Use `required` instead of `@required`
